@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import InputField from "../components/InputField";
 import SelectField from "../components/SelectField";
 import TravelOptionCard from "../components/TravelOptionCard";
@@ -8,10 +9,13 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
   const [destination, setDestination] = useState("");
   const [duration, setDuration] = useState("");
   const [travelingWith, setTravelingWith] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
     console.log({ destination, duration, travelingWith });
-    // Handle submission logic here
+    // Navigate to HomePage when continue button is clicked
+    // Include state to indicate it's coming from the form
+    navigate('/home', { state: { fromForm: true } });
   };
 
   return (
@@ -38,17 +42,17 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
         
         {/* Header - centered in portrait */}
         <div className="mb-8 text-center">
-          <h1 className="text-2xl sm:text-3xl font-extrabold mb-1 sm:mb-2">
+          <h1 className="text-2xl sm:text-3xl font-extrabold mb-1 sm:mb-2 font-mont">
             Plan Your Journey, Your Way!
           </h1>
-          <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+          <p className={`font-montserrat ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             Let's create your personalised travel experience
           </p>
         </div>
 
         {/* Destination */}
         <div className="mb-6">
-          <label className="block text-lg font-medium mb-2">
+          <label className="block text-lg font-medium mb-2 font-mont">
             Where would you like to go?
           </label>
           <InputField
@@ -75,7 +79,7 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
 
         {/* Duration */}
         <div className="mb-6">
-          <label className="block text-lg font-medium mb-2">
+          <label className="block text-lg font-medium mb-2 font-mont">
             How long will you stay?
           </label>
           <SelectField
@@ -102,7 +106,7 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
 
         {/* Traveling With */}
         <div className="mb-8">
-          <label className="block text-lg font-medium mb-2">
+          <label className="block text-lg font-medium mb-2 font-mont">
             Who are you traveling with?
           </label>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
