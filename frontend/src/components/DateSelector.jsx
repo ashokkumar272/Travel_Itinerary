@@ -4,7 +4,7 @@ const DateSelector = ({
   initialDate = new Date('2025-01-27'),
   onDateSelected = () => {},
   totalActivities = 14,
-  darkMode = true
+  darkMode = false
 }) => {
   const [selectedDate, setSelectedDate] = useState(initialDate);
   const [selectedDayIndex, setSelectedDayIndex] = useState(0); // Index of selected day (0 = MON, etc.)

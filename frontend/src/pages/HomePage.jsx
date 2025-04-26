@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import homeIcon from '../assets/li_home.svg';
-import searchIcon from '../assets/li_search.svg';
-import heartIcon from '../assets/mynaui_heart.svg';
-import userIcon from '../assets/li_user.svg';
-import plusIcon from '../assets/li_plus.svg';
-import tokyo from '../assets/Tokyo.png';
+import homeIcon from '../assets/navbar/li_home.svg';
+import searchIcon from '../assets/navbar/li_search.svg';
+import heartIcon from '../assets/navbar/mynaui_heart.svg';
+import userIcon from '../assets/navbar/li_user.svg';
+import plusIcon from '../assets/navbar/li_plus.svg';
+import tokyo from '../assets/trips/Tokyo.png';
+import accomodation1 from '../assets/accommodation/shinagawa.png';
+import accomodation2 from '../assets/accommodation/macure.png';
 import TripCard from '../components/TripCard';
 import FlightCard from '../components/FlightCard';
 import HotelBookingCard from '../components/HotelBookingCard';
@@ -33,7 +35,7 @@ const HomePage = ({ darkMode }) => {
       duration: '8',
       groupSize: '4 (2M,2F)',
       activities: '14',
-      image: tokyo
+      image: accomodation1
     }
   ];
 
@@ -47,17 +49,17 @@ const HomePage = ({ darkMode }) => {
       numberOfNights: '6',
       rating: '4.2',
       status: 'Confirmed',
-      image: tokyo
+      image: accomodation2
     },
     {
       id: 2,
-      hotelName: 'Grand Hyatt Tokyo',
-      checkInDate: '05.04.2025, 12:00 pm',
-      checkOutDate: '08.04.2025, 10:00 am',
+      hotelName: 'Macure Tokyo Hotel',
+      checkInDate: '28.01.2025, 12:00 pm',
+      checkOutDate: '02.02.2025, 10:00 am',
       numberOfNights: '3',
       rating: '4.8',
       status: 'Confirmed',
-      image: tokyo
+      image: accomodation1
     },
     {
       id: 3,
@@ -89,6 +91,15 @@ const HomePage = ({ darkMode }) => {
       subtitle: 'Senso-ji',
       timing: '8:15 am Morning',
       duration: '3 hours',
+      pickupPoint: 'From Hotel',
+      image: tokyo
+    },
+    {
+      id: 2,
+      title: 'Tokyo Skytree & Sumida River Cruise',
+      subtitle: 'Sumida',
+      timing: '1:30 pm Afternoon',
+      duration: '4 hours',
       pickupPoint: 'From Hotel',
       image: tokyo
     },
@@ -189,6 +200,7 @@ const HomePage = ({ darkMode }) => {
           initialDate={new Date('2025-01-27')}
           onDateSelected={handleDateSelected}
           totalActivities={14}
+          darkMode={darkMode}
         />
 
         {/* Activity Cards */}
