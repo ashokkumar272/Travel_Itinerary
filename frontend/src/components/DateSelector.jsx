@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import activities from '../assets/activities.png'
+import activities_l from '../assets/activities_l.png'
+import activities_d from '../assets/activities_d.png'
 
 const DateSelector = ({
   initialDate = new Date("2025-01-27"),
@@ -161,7 +162,13 @@ const DateSelector = ({
             darkMode ? "text-[#C4FF3C]" : "text-blue-600"
           }`}
         >
-          <span className="mr-1"><img src={activities} alt="" className="w-4 sm:w-auto" /></span> 3 Activities
+          <span className="mr-1 flex items-center">
+            <img 
+              src={darkMode ? activities_d : activities_l} 
+              alt="Activities icon" 
+              className="w-4 h-4 sm:w-5 sm:h-5 object-contain" 
+            />
+          </span> 3 Activities
         </div>
       </div>
     </div>

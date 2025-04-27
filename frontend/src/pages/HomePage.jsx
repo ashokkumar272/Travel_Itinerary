@@ -196,7 +196,7 @@ const HomePage = ({ darkMode }) => {
         </div>
 
         {/* Activities section with DateSelector */}
-        <div className="mb-8">
+        <div className="mb-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold font-mont">Activities</h2>
             <a href="#" className={`underline ${darkMode ? 'text-[#C4FF3C]' : 'text-blue-600'} font-medium`}>See all</a>
@@ -209,19 +209,20 @@ const HomePage = ({ darkMode }) => {
           />
         </div>
 
-        {/* Activity Cards */}
-        <div className="space-y-4">
+        {/* Activity Cards with improved spacing and consistent layout */}
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
           {activities.map((activity) => (
-            <ActivityCard
-              key={activity.id}
-              title={activity.title}
-              subtitle={activity.subtitle}
-              timing={activity.timing}
-              duration={activity.duration}
-              pickupPoint={activity.pickupPoint}
-              image={activity.image}
-              darkMode={darkMode}
-            />
+            <div key={activity.id} className="w-full">
+              <ActivityCard
+                title={activity.title}
+                subtitle={activity.subtitle}
+                timing={activity.timing}
+                duration={activity.duration}
+                pickupPoint={activity.pickupPoint}
+                image={activity.image}
+                darkMode={darkMode}
+              />
+            </div>
           ))}
         </div>
       </div>
