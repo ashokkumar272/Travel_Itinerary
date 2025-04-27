@@ -11,18 +11,19 @@ const ActivityCard = ({
 }) => {
   return (
     <div 
-      className={`w-[341px] h-[127px] rounded-[8px] overflow-hidden flex border border-gray-400 ${
+      className={`w-full max-w-[341px] sm:w-[341px] h-auto min-h-[127px] rounded-[8px] overflow-hidden flex border border-gray-400 ${
         darkMode ? 'bg-[#1A1A1A] text-white border-gray-700' : 'bg-white text-gray-800'
       }`}
       onClick={onClick}
       style={{ cursor: onClick ? 'pointer' : 'default' }}
     >
       {/* Left side - Activity Image */}
-      <div className="w-[143px] h-full overflow-hidden">
+      <div className="w-[30%] min-w-[100px] sm:w-[143px] h-auto self-stretch overflow-hidden">
         <img 
           src={image} 
           alt={title} 
           className="w-full h-full object-cover"
+          style={{ display: 'block' }}
         />
       </div>
 
@@ -30,29 +31,29 @@ const ActivityCard = ({
       <div className="flex-1 p-2 flex flex-col justify-between">
         {/* Activity Title and Subtitle */}
         <div>
-          <h2 className="text-[14px] font-semibold leading-tight">{title}</h2>
+          <h2 className="text-[13px] sm:text-[14px] font-semibold leading-tight">{title}</h2>
         </div>
 
         {/* Activity Details */}
         <div className=''>
           {timing && (
-            <div className="flex items-start gap-2 py-0">
-              <span className="text-[12px] font-semibold">Timing:</span>
-              <span className="text-[12px]">{timing}</span>
+            <div className="flex items-start gap-1 sm:gap-2 py-0">
+              <span className="text-[11px] sm:text-[12px] font-semibold">Timing:</span>
+              <span className="text-[11px] sm:text-[12px]">{timing}</span>
             </div>
           )}
           
           {duration && (
-            <div className="flex items-start gap-2 py-0">
-              <span className="text-[12px] font-semibold">Duration:</span>
-              <span className="text-[12px]">{duration}</span>
+            <div className="flex items-start gap-1 sm:gap-2 py-0">
+              <span className="text-[11px] sm:text-[12px] font-semibold">Duration:</span>
+              <span className="text-[11px] sm:text-[12px]">{duration}</span>
             </div>
           )}
           
           {pickupPoint && (
-            <div className="flex items-start gap-2 py-0">
-              <span className="text-[12px] font-semibold">Pick up:</span>
-              <span className="text-[12px]">{pickupPoint}</span>
+            <div className="flex items-start gap-1 sm:gap-2 py-0">
+              <span className="text-[11px] sm:text-[12px] font-semibold">Pick up:</span>
+              <span className="text-[11px] sm:text-[12px]">{pickupPoint}</span>
             </div>
           )}
         </div>

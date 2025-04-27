@@ -3,7 +3,7 @@ import React from 'react';
 const TravelOptionCard = ({ icon, label, selected, onClick, darkMode }) => {
   return (
     <div 
-      className={`flex gap-3 items-center justify-center px-4 py-3 rounded-lg border cursor-pointer ${
+      className={`flex gap-2 md:gap-3 items-center justify-center px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 rounded-lg border cursor-pointer transition-all w-full ${
         darkMode
           ? selected 
             ? 'bg-blue-900 border-blue-500 text-white' 
@@ -14,8 +14,8 @@ const TravelOptionCard = ({ icon, label, selected, onClick, darkMode }) => {
       }`}
       onClick={onClick}
     >
-      <div className="text-xl mb-1">{icon}</div>
-      <div className="text-sm font-medium">{label}</div>
+      <div className="text-lg sm:text-xl mb-0.5 sm:mb-1">{icon}</div>
+      <div className="text-xs sm:text-sm font-medium">{label}</div>
     </div>
   );
 };
