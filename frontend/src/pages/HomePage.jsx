@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-import homeIcon from '../assets/navbar/li_home.svg';
-import searchIcon from '../assets/navbar/li_search.svg';
-import heartIcon from '../assets/navbar/mynaui_heart.svg';
-import userIcon from '../assets/navbar/li_user.svg';
-import plusIcon from '../assets/navbar/li_plus.svg';
 import tokyo from '../assets/trips/Tokyo.png';
 import accomodation1 from '../assets/accomodation/shinagava.png';
 import accomodation2 from '../assets/accomodation/macure.png';
@@ -15,6 +10,7 @@ import FlightCard from '../components/FlightCard';
 import HotelBookingCard from '../components/HotelBookingCard';
 import ActivityCard from '../components/ActivityCard';
 import DateSelector from '../components/DateSelector';
+import BottomNavbar from '../components/BottomNavbar';
 
 const HomePage = ({ darkMode }) => {
   const [selectedIcon, setSelectedIcon] = useState('home'); // Default selected icon is home
@@ -115,7 +111,7 @@ const HomePage = ({ darkMode }) => {
   ];
 
   return (
-    <div className={`flex flex-col min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-gray-900'}`}>
+    <div className={`flex flex-col min-h-screen ${darkMode ? 'bg-[#0B0809] text-white' : 'bg-white text-gray-900'}`}>
       {/* Top section with greeting and profile */}
       <div className="px-6 py-4">
         <div className="flex justify-between items-center">
@@ -227,30 +223,12 @@ const HomePage = ({ darkMode }) => {
         </div>
       </div>
   
-      {/* Bottom navigation bar */}
-      <div className={`fixed bottom-0 left-0 right-0 flex justify-around items-center py-3 border-t ${darkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'}`}>
-        <ul className="flex justify-between items-center w-full max-w-md mx-auto px-4">
-          {[
-            { icon: homeIcon, label: 'home' },
-            { icon: searchIcon, label: 'search' },
-            { icon: plusIcon, label: 'add' },
-            { icon: heartIcon, label: 'favorites' },
-            { icon: userIcon, label: 'profile' },
-          ].map(({ icon, label }) => (
-            <li key={label} className="flex items-center justify-center cursor-pointer" onClick={() => setSelectedIcon(label)}>
-              <div className={`p-3 ${selectedIcon === label ? 'bg-selected-icon rounded-full' : ''}`}>
-                <img 
-                  src={icon} 
-                  alt={label} 
-                  width="24" 
-                  height="24" 
-                  className={selectedIcon === label ? 'filter-selected' : 'filter-gray'} 
-                />
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Replace the bottom navigation bar with the BottomNavbar component */}
+      <BottomNavbar 
+        darkMode={darkMode} 
+        selectedIcon={selectedIcon} 
+        setSelectedIcon={setSelectedIcon} 
+      />
     </div>
   );
 }  

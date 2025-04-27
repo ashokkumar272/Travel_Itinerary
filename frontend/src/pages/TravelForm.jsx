@@ -19,8 +19,8 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
   };
 
   return (
-    <div className={`flex flex-col justify-between min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-gray-900'}`}>
-      <div className={`w-full max-w-3xl mx-auto p-6 ${darkMode ? 'bg-black' : 'bg-white'} rounded-lg relative`}>
+    <div className={`flex flex-col justify-between min-h-screen ${darkMode ? 'bg-[#0B0809] text-white' : 'bg-white text-gray-900'}`}>
+      <div className={`w-full max-w-3xl mx-auto p-6 ${darkMode ? 'bg-[#0B0809]' : 'bg-white'} rounded-lg relative`}>
         {/* Dark Mode Toggle */}
         <div className="absolute right-6 top-6">
           <button 
@@ -181,7 +181,7 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
           </div>
         </div>
       </div>
-      <div className={`flex justify-center sm:justify-start p-6 mt-auto ${darkMode ? 'bg-black' : ''}`}>
+      <div className={`flex justify-center sm:justify-start p-6 mt-auto ${darkMode ? 'bg-' : ''}`}>
         <div className="w-full sm:max-w-xs">
           <Button onClick={handleSubmit} darkMode={darkMode}>Continue</Button>
         </div>

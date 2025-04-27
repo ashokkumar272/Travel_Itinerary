@@ -93,14 +93,14 @@ const SlidingPanel = ({
       <div 
         ref={panelRef}
         className={`fixed top-0 right-0 bottom-0 max-w-full w-full sm:w-[90%] md:w-[460px] lg:w-[500px] 
-          ${darkMode ? 'bg-black text-white' : 'bg-white text-gray-900'} 
+          ${darkMode ? 'bg-[#0B0809] text-white' : 'bg-white text-gray-900'} 
           shadow-lg z-50 transition-transform duration-300 ease-in-out transform
           ${isOpen ? 'translate-x-0' : 'translate-x-full'}
           overflow-y-auto`}
       >
         {/* Panel Header */}
         <div className={`sticky top-0 z-10 px-4 py-4 flex justify-between items-center border-b ${
-          darkMode ? 'border-gray-700 bg-black' : 'border-gray-200 bg-white'
+          darkMode ? 'border-gray-700 bg-[#0B0809]' : 'border-gray-200 bg-white'
         }`}>
           <h2 className="text-xl font-bold font-mont">{title}</h2>
           <button 

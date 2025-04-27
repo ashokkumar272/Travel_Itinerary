@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   return (
-    <nav className={`w-full px-4 sm:px-6 md:px-8 lg:px-10 py-4 ${darkMode ? 'bg-[#1A1A1A] text-white' : 'bg-white text-gray-800'}`}>
+    <nav className={`w-full px-4 sm:px-6 md:px-8 lg:px-10 py-4 ${darkMode ? 'bg-[#1D1F24] text-white' : 'bg-white text-gray-800'}`}>
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}

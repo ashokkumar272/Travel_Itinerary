@@ -9,7 +9,7 @@ const SelectField = ({ icon, placeholder, value, onChange, darkMode }) => {
       <select
         className={`w-full py-2 px-10 border appearance-none rounded-lg focus:ring-1 focus:ring-blue-500 ${
           darkMode 
-            ? 'bg-gray-700 border-gray-600 text-white' 
+            ? 'bg-[#333333] border-gray-600 text-white' 
             : 'bg-white border-gray-400 focus:outline-none'
         }`}
         value={value}

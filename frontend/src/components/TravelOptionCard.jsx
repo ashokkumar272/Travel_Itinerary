@@ -7,9 +7,9 @@ const TravelOptionCard = ({ icon, label, selected, onClick, darkMode }) => {
         darkMode
           ? selected 
             ? 'bg-blue-900 border-blue-500 text-white' 
-            : 'border-gray-600 bg-gray-700 text-gray-200'
+            : 'border-gray-600 bg-[#333333] text-gray-200'
           : selected 
-            ? 'bg-blue-50 border-blue-600' 
+            ? 'bg-blue-300 border-blue-700 ' 
             : 'border-gray-400'
       }`}
       onClick={onClick}

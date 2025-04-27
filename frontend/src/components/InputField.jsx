@@ -10,7 +10,7 @@ const InputField = ({ icon, placeholder, value, onChange, darkMode }) => {
         type="text"
         className={`w-full py-2 px-10 border ${
           darkMode 
-            ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500' 
+            ? 'bg-[#333333] border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500' 
             : 'bg-white border-gray-400 focus:ring-blue-500 focus:outline-none'
         } rounded-lg focus:ring-1`}
         placeholder={placeholder}
