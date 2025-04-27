@@ -12,8 +12,8 @@ const ActivityCard = ({
 }) => {
   return (
     <div 
-      className={`w-[341px] h-[127px] rounded-[8px] overflow-hidden flex shadow-md border border-gray-100 ${
-        darkMode ? 'bg-gray-800 text-white border-gray-700' : 'bg-white text-gray-800'
+      className={`w-[341px] h-[127px] rounded-[8px] overflow-hidden flex border border-gray-400 ${
+        darkMode ? 'bg-[#1A1A1A] text-white border-gray-700' : 'bg-white text-gray-800'
       }`}
       onClick={onClick}
       style={{ cursor: onClick ? 'pointer' : 'default' }}

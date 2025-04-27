@@ -46,12 +46,12 @@ const HotelBookingCard = ({
 
   return (
     <div 
-      className={`w-[198px] h-[239px] rounded-[16px] overflow-hidden shadow-lg ${
-        darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'
+      className={`w-[198px] h-[239px] rounded-[16px] overflow-hidden ${
+        darkMode ? 'bg-[#1A1A1A] text-white' : 'bg-white text-gray-800 border border-gray-400'
       }`}
     >
       {/* Hotel image with rating */}
-      <div className="relative h-[100px] overflow-hidden">
+      <div className="relative h-[50%] overflow-hidden">
         <img 
           src={image} 
           alt={hotelName} 
@@ -66,7 +66,7 @@ const HotelBookingCard = ({
       </div>
 
       {/* Hotel booking details */}
-      <div className="p-3">
+      <div className="p-2">
         <h2 className="text-base font-bold truncate">{hotelName}</h2>
         
         <div className="mt-2 space-y-1 text-xs">

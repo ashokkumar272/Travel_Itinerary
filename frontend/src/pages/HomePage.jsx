@@ -5,8 +5,11 @@ import heartIcon from '../assets/navbar/mynaui_heart.svg';
 import userIcon from '../assets/navbar/li_user.svg';
 import plusIcon from '../assets/navbar/li_plus.svg';
 import tokyo from '../assets/trips/Tokyo.png';
-import accomodation1 from '../assets/accommodation/shinagawa.png';
-import accomodation2 from '../assets/accommodation/macure.png';
+import accomodation1 from '../assets/accomodation/shinagava.png';
+import accomodation2 from '../assets/accomodation/macure.png';
+import activity1 from '../assets/activities/kimono-wearing.png';
+import activity2 from '../assets/activities/senso-ji-temple.png';
+import activity3 from '../assets/activities/sky-tree.png';
 import TripCard from '../components/TripCard';
 import FlightCard from '../components/FlightCard';
 import HotelBookingCard from '../components/HotelBookingCard';
@@ -35,7 +38,7 @@ const HomePage = ({ darkMode }) => {
       duration: '8',
       groupSize: '4 (2M,2F)',
       activities: '14',
-      image: accomodation1
+      image: tokyo
     }
   ];
 
@@ -49,7 +52,7 @@ const HomePage = ({ darkMode }) => {
       numberOfNights: '6',
       rating: '4.2',
       status: 'Confirmed',
-      image: accomodation2
+      image: accomodation1
     },
     {
       id: 2,
@@ -59,7 +62,7 @@ const HomePage = ({ darkMode }) => {
       numberOfNights: '3',
       rating: '4.8',
       status: 'Confirmed',
-      image: accomodation1
+      image: accomodation2
     },
     {
       id: 3,
@@ -92,7 +95,7 @@ const HomePage = ({ darkMode }) => {
       timing: '8:15 am Morning',
       duration: '3 hours',
       pickupPoint: 'From Hotel',
-      image: tokyo
+      image: activity2
     },
     {
       id: 2,
@@ -101,7 +104,7 @@ const HomePage = ({ darkMode }) => {
       timing: '1:30 pm Afternoon',
       duration: '4 hours',
       pickupPoint: 'From Hotel',
-      image: tokyo
+      image: activity3
     },
     {
       id: 2,
@@ -110,7 +113,7 @@ const HomePage = ({ darkMode }) => {
       timing: '1:30 pm Afternoon',
       duration: '4 hours',
       pickupPoint: 'From Hotel',
-      image: tokyo
+      image: activity1
     }
   ];
 
@@ -174,7 +177,7 @@ const HomePage = ({ darkMode }) => {
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold font-mont">Accommodation</h2>
-            <button className="text-blue-600 text-sm font-medium hover:underline">View All</button>
+            <a href="#" className={`underline ${darkMode ? 'text-[#C4FF3C]' : 'text-blue-600'} font-medium`}>See all</a>
           </div>
           <div className="overflow-x-auto -mx-6 px-6 pb-2">
             <div className="flex gap-4 min-w-max">
@@ -196,12 +199,18 @@ const HomePage = ({ darkMode }) => {
         </div>
 
         {/* Activities section with DateSelector */}
-        <DateSelector 
-          initialDate={new Date('2025-01-27')}
-          onDateSelected={handleDateSelected}
-          totalActivities={14}
-          darkMode={darkMode}
-        />
+        <div className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-lg font-semibold font-mont">Activities</h2>
+            <a href="#" className={`underline ${darkMode ? 'text-[#C4FF3C]' : 'text-blue-600'} font-medium`}>See all</a>
+          </div>
+          <DateSelector 
+            initialDate={new Date('2025-01-27')}
+            onDateSelected={handleDateSelected}
+            totalActivities={14}
+            darkMode={darkMode}
+          />
+        </div>
 
         {/* Activity Cards */}
         <div className="space-y-4">
