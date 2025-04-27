@@ -1,15 +1,18 @@
 import React from 'react';
+import { useTheme } from '../context/ThemeContext';
 
-const TravelOptionCard = ({ icon, label, selected, onClick, darkMode }) => {
+const TravelOptionCard = ({ icon, label, selected, onClick }) => {
+  const { darkMode } = useTheme();
+  
   return (
     <div 
       className={`flex gap-2 md:gap-3 items-center justify-center px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 rounded-lg border cursor-pointer transition-all w-full ${
         darkMode
           ? selected 
             ? 'bg-blue-900 border-blue-500 text-white' 
-            : 'border-gray-600 bg-[#333333] text-gray-200'
+            : 'border-dark-border bg-dark-input text-gray-200'
           : selected 
-            ? 'bg-blue-300 border-blue-700 ' 
+            ? 'bg-blue-300 border-blue-700' 
             : 'border-gray-400'
       }`}
       onClick={onClick}

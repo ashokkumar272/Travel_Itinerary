@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Button = ({ children, onClick, className, darkMode }) => {
+const Button = ({ children, onClick, className }) => {
   return (
     <button
-      className={`w-full py-3 px-4 text-white font-medium rounded-lg ${
-        darkMode 
-        ? 'bg-[#3643FB] hover:bg-blue-800' 
-        : 'bg-[#3643FB] hover:bg-blue-700'
-      } ${className}`}
+      className={`w-full py-3 px-4 text-white font-medium rounded-lg bg-[var(--color-primary)] hover:opacity-90 ${className}`}
+      style={{
+        backgroundColor: 'var(--color-primary)',
+        borderRadius: 'var(--radius-button)'
+      }}
       onClick={onClick}
     >
       {children}

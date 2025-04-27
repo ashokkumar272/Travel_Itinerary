@@ -1,26 +1,27 @@
-/* Import external resources first */
+/* Import external resources */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Import theme variables */
+@import './theme.css';
 
 /* Then Tailwind imports */
 @import "tailwindcss";
-/* @import "tailwindcss/components";
-@import "tailwindcss/utilities"; */
 
 /* Note: Mont font may need to be purchased or added via a local font file as it's not freely available on Google Fonts */
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* Font classes */
 .font-mont {
-  font-family: 'Mont', sans-serif; /* Mont for titles */
+  font-family: var(--font-mont);
 }
 
 .font-montserrat {
-  font-family: 'Montserrat', sans-serif; /* Montserrat for subtitles */
+  font-family: var(--font-montserrat);
 }
 
 /* SVG filter for normal icons in navbar (#676D75) */

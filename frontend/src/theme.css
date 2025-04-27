@@ -1,0 +1,102 @@
+:root {
+  /* Primary colors */
+  --color-primary: #3643FB;
+  --color-primary-hover: #2a36e0; 
+  --color-primary-dark: #1e26bb;
+  --color-primary-light: rgba(54, 67, 251, 0.3); /* 30% opacity */
+  
+  /* Light theme colors */
+  --color-bg-light: #FFFFFF;
+  --color-bg-light-secondary: #F7F9FC;
+  --color-text-light: #1A202C;
+  --color-text-light-secondary: #4A5568;
+  --color-text-light-muted: #718096;
+  --color-border-light: #CBD5E0;
+  
+  /* Dark theme colors */
+  --color-bg-dark: #0B0809;
+  --color-bg-dark-card: #1A1A1A;
+  --color-bg-dark-input: #333333;
+  --color-bg-dark-dateCard: #242424;
+  --color-bg-dark-navbar: #1D1F24;
+  --color-text-dark: #FFFFFF;
+  --color-text-dark-secondary: #C4C4C4;
+  --color-text-dark-muted: #A0AEC0;
+  --color-border-dark: #3A3A3A;
+  
+  /* Accent colors */
+  --color-accent-light: #3643FB;
+  --color-accent-dark: #C4FF3C;
+  --color-accent-lime: #C4FF3C;
+  --color-accent-lime-light: #D1F462;
+  --color-accent-lime-transparent: rgba(209, 244, 98, 0.2);
+  
+  /* Status colors */
+  --color-success: #10b981;
+  --color-success-bg: #ecfdf5;
+  --color-pending: #f59e0b;
+  --color-pending-bg: #fffbeb;
+  
+  /* Font families */
+  --font-mont: 'Mont', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Border radii */
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-dateSelector: 8px;
+}
+
+/* Dark theme class that can be applied to any element */
+.dark {
+  --color-bg: var(--color-bg-dark);
+  --color-bg-card: var(--color-bg-dark-card);
+  --color-bg-input: var(--color-bg-dark-input);
+  --color-bg-dateCard: var(--color-bg-dark-dateCard);
+  --color-bg-navbar: var(--color-bg-dark-navbar);
+  --color-text: var(--color-text-dark);
+  --color-text-secondary: var(--color-text-dark-secondary);
+  --color-text-muted: var(--color-text-dark-muted);
+  --color-border: var(--color-border-dark);
+  --color-accent: var(--color-accent-dark);
+  --color-selected-icon-bg: var(--color-accent-lime-transparent);
+}
+
+/* Light theme class (default) */
+:root, .light {
+  --color-bg: var(--color-bg-light);
+  --color-bg-card: var(--color-bg-light);
+  --color-bg-input: var(--color-bg-light);
+  --color-bg-dateCard: var(--color-bg-light);
+  --color-bg-navbar: var(--color-bg-light);
+  --color-text: var(--color-text-light);
+  --color-text-secondary: var(--color-text-light-secondary);
+  --color-text-muted: var(--color-text-light-muted);
+  --color-border: var(--color-border-light);
+  --color-accent: var(--color-accent-light);
+  --color-selected-icon-bg: var(--color-primary-light);
+}
+
+/* Font utility classes */
+.font-primary {
+  font-family: var(--font-mont);
+}
+
+.font-secondary {
+  font-family: var(--font-montserrat);
+}
+
+/* SVG filter for normal icons in navbar (#676D75) */
+.filter-gray {
+  filter: invert(41%) sepia(10%) saturate(382%) hue-rotate(182deg) brightness(94%) contrast(89%);
+}
+
+/* SVG filter for selected icons (using variables) */
+.dark .filter-selected {
+  filter: invert(89%) sepia(29%) saturate(1122%) hue-rotate(39deg) brightness(103%) contrast(97%);
+}
+
+.light .filter-selected {
+  filter: invert(22%) sepia(81%) saturate(3595%) hue-rotate(232deg) brightness(99%) contrast(92%);
+}

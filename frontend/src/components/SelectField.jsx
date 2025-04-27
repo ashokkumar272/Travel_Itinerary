@@ -1,15 +1,18 @@
 import React from 'react';
+import { useTheme } from '../context/ThemeContext';
 
-const SelectField = ({ icon, placeholder, value, onChange, darkMode }) => {
+const SelectField = ({ icon, placeholder, value, onChange }) => {
+  const { darkMode } = useTheme();
+  
   return (
     <div className="relative w-full">
       <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none text-gray-500">
         {icon}
       </div>
       <select
-        className={`w-full py-2 px-10 border appearance-none rounded-lg focus:ring-1 focus:ring-blue-500 ${
+        className={`w-full py-2 px-10 border appearance-none rounded-lg focus:ring-1 focus:ring-primary ${
           darkMode 
-            ? 'bg-[#333333] border-gray-600 text-white' 
+            ? 'bg-dark-input border-dark-border text-white' 
             : 'bg-white border-gray-400 focus:outline-none'
         }`}
         value={value}

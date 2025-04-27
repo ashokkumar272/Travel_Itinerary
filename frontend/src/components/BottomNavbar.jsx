@@ -24,13 +24,27 @@ const BottomNavbar = ({ darkMode, selectedIcon, setSelectedIcon }) => {
             className="flex items-center justify-center cursor-pointer" 
             onClick={() => setSelectedIcon(label)}
           >
-            <div className={`p-3 ${selectedIcon === label ? 'bg-selected-icon rounded-full' : ''}`}>
+            <div className={`p-3 ${selectedIcon === label ? 
+              (darkMode ? 'bg-[#D1F46233]' : 'bg-[#3643FB4D]') + ' rounded-full' 
+              : ''}`}>
               <img 
                 src={icon} 
                 alt={label} 
                 width="24" 
                 height="24" 
-                className={selectedIcon === label ? 'filter-selected' : 'filter-gray'} 
+                className={`${selectedIcon === label && label !== 'add' ? 'filter-selected' : (label !== 'add' ? 'opacity-60 grayscale' : '')}`} 
+                style={
+                  label === 'add' ? 
+                    (darkMode ? 
+                      { filter: 'brightness(0) saturate(100%) invert(89%) sepia(29%) saturate(1122%) hue-rotate(39deg) brightness(103%) contrast(97%)' } :
+                      { filter: 'brightness(0) saturate(100%) invert(21%) sepia(96%) saturate(3611%) hue-rotate(234deg) brightness(95%) contrast(95%)' }
+                    ) :
+                    selectedIcon === label ? 
+                    (darkMode 
+                      ? { filter: 'brightness(0) saturate(100%) invert(89%) sepia(29%) saturate(1122%) hue-rotate(39deg) brightness(103%) contrast(97%)' } 
+                      : { filter: 'brightness(0) saturate(100%) invert(21%) sepia(96%) saturate(3611%) hue-rotate(234deg) brightness(95%) contrast(95%)' }
+                    ) : {}
+                }
               />
             </div>
           </li>
