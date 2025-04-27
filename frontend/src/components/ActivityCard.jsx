@@ -3,7 +3,6 @@ import React from 'react';
 const ActivityCard = ({ 
   image,
   title,
-  subtitle,
   timing,
   duration,
   pickupPoint,
@@ -28,33 +27,32 @@ const ActivityCard = ({
       </div>
 
       {/* Right side - Activity Details */}
-      <div className="flex-1 p-4 flex flex-col justify-between">
+      <div className="flex-1 p-2 flex flex-col justify-between">
         {/* Activity Title and Subtitle */}
         <div>
-          <h2 className="text-[16px] font-bold leading-tight">{title}</h2>
-          {subtitle && <h3 className="text-[14px] text-gray-600 dark:text-gray-400">{subtitle}</h3>}
+          <h2 className="text-[14px] font-semibold leading-tight">{title}</h2>
         </div>
 
         {/* Activity Details */}
-        <div className="space-y-1">
+        <div className=''>
           {timing && (
-            <div className="flex items-start">
-              <span className="text-[14px] font-semibold w-[80px]">Timing:</span>
-              <span className="text-[14px]">{timing}</span>
+            <div className="flex items-start gap-2 py-0">
+              <span className="text-[12px] font-semibold">Timing:</span>
+              <span className="text-[12px]">{timing}</span>
             </div>
           )}
           
           {duration && (
-            <div className="flex items-start">
-              <span className="text-[14px] font-semibold w-[80px]">Duration:</span>
-              <span className="text-[14px]">{duration}</span>
+            <div className="flex items-start gap-2 py-0">
+              <span className="text-[12px] font-semibold">Duration:</span>
+              <span className="text-[12px]">{duration}</span>
             </div>
           )}
           
           {pickupPoint && (
-            <div className="flex items-start">
-              <span className="text-[14px] font-semibold w-[80px]">Pick up:</span>
-              <span className="text-[14px]">{pickupPoint}</span>
+            <div className="flex items-start gap-2 py-0">
+              <span className="text-[12px] font-semibold">Pick up:</span>
+              <span className="text-[12px]">{pickupPoint}</span>
             </div>
           )}
         </div>

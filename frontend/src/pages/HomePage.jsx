@@ -90,8 +90,7 @@ const HomePage = ({ darkMode }) => {
   const activities = [
     {
       id: 1,
-      title: 'Senso-ji Temple & Nakamise Shopping Street',
-      subtitle: 'Senso-ji',
+      title: 'Senso-ji Temple & Nakamise Shopping Street Senso-ji',
       timing: '8:15 am Morning',
       duration: '3 hours',
       pickupPoint: 'From Hotel',
@@ -99,8 +98,7 @@ const HomePage = ({ darkMode }) => {
     },
     {
       id: 2,
-      title: 'Tokyo Skytree & Sumida River Cruise',
-      subtitle: 'Sumida',
+      title: 'Tokyo Skytree',
       timing: '1:30 pm Afternoon',
       duration: '4 hours',
       pickupPoint: 'From Hotel',
@@ -109,7 +107,6 @@ const HomePage = ({ darkMode }) => {
     {
       id: 2,
       title: 'Tokyo Skytree & Sumida River Cruise',
-      subtitle: 'Sumida',
       timing: '1:30 pm Afternoon',
       duration: '4 hours',
       pickupPoint: 'From Hotel',

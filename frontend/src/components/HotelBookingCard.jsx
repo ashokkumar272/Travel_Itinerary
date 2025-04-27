@@ -67,7 +67,7 @@ const HotelBookingCard = ({
 
       {/* Hotel booking details */}
       <div className="p-2">
-        <h2 className="text-base font-bold truncate">{hotelName}</h2>
+        <h2 className="text-base font-semibold truncate">{hotelName}</h2>
         
         <div className="mt-2 space-y-1 text-xs">
           <div className='flex gap-1'>
@@ -83,7 +83,7 @@ const HotelBookingCard = ({
 
         <div className="mt-3 flex justify-between items-center">
           <div>
-            <p className="text-sm font-bold">{numberOfNights} Nights</p>
+            <p className="text-sm font-semibold">{numberOfNights} Nights</p>
           </div>
           <div className="flex items-center text-green-500 text-xs">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
