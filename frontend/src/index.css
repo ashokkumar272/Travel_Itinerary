@@ -38,3 +38,47 @@ body {
   background-color: rgba(49, 61, 223, 0.3);
 }
 
+/* Sliding panel animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.5; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 0.5; }
+  to { opacity: 0; }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+.panel-enter-active {
+  animation: slideIn 300ms ease-out forwards;
+}
+
+.panel-overlay-enter-active {
+  animation: fadeIn 300ms ease-out forwards;
+}
+
+.panel-exit-active {
+  animation: slideOut 300ms ease-in forwards;
+}
+
+.panel-overlay-exit-active {
+  animation: fadeOut 300ms ease-in forwards;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 640px) {
+  .panel-enter-active, .panel-exit-active {
+    animation-duration: 200ms; /* Slightly faster on mobile */
+  }
+}
+

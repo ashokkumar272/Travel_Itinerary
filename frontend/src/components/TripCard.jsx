@@ -1,4 +1,5 @@
 import React from 'react';
+import { usePanel } from '../context/PanelContext';
 
 const TripCard = ({ 
   destination, 
@@ -10,6 +11,8 @@ const TripCard = ({
   image,
   darkMode 
 }) => {
+  const { openPanel } = usePanel();
+  
   // Format dates for display (assuming dates are passed in as strings in format YYYY-MM-DD)
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -22,15 +25,70 @@ const TripCard = ({
 
   // Parse group size information (assuming format like "4 (2M,2F)")
   const [totalCount, details] = groupSize.split(' ');
+  
+  // Handler for opening the panel with trip details
+  const handleTripClick = () => {
+    const tripDetailContent = (
+      <div className="space-y-6">
+        <div>
+          <img 
+            src={image} 
+            alt={destination} 
+            className="w-full h-48 object-cover rounded-lg"
+          />
+        </div>
+        
+        <div className="space-y-4">
+          <h2 className="text-2xl font-bold">{destination}</h2>
+          
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <p className="text-gray-500 dark:text-gray-400">Start Date</p>
+              <p className="font-semibold">{formatDate(startDate)}</p>
+            </div>
+            <div>
+              <p className="text-gray-500 dark:text-gray-400">End Date</p>
+              <p className="font-semibold">{formatDate(endDate)}</p>
+            </div>
+            <div>
+              <p className="text-gray-500 dark:text-gray-400">Duration</p>
+              <p className="font-semibold">{duration} days</p>
+            </div>
+            <div>
+              <p className="text-gray-500 dark:text-gray-400">Group Size</p>
+              <p className="font-semibold">{totalCount} {details}</p>
+            </div>
+          </div>
+          
+          <div>
+            <p className="text-gray-500 dark:text-gray-400">Activities</p>
+            <p className="font-semibold">{activities} activities booked</p>
+          </div>
+          
+          <div className="pt-4 border-t border-gray-300 dark:border-gray-700">
+            <h3 className="text-lg font-semibold mb-2">Trip Overview</h3>
+            <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              Experience the vibrant culture and stunning landscapes of {destination}.
+              This {duration}-day trip includes various activities and accommodations
+              for your group of {groupSize}.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+
+    openPanel(`${destination} Trip`, 'trip', tripDetailContent);
+  };
 
   return (
     <div 
-      className="w-full h-auto min-h-[330px] rounded-[16px] overflow-hidden relative text-white"
+      className="w-full h-auto min-h-[330px] rounded-[16px] overflow-hidden relative text-white cursor-pointer"
       style={{ 
         backgroundImage: `url(${image})`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
+      onClick={handleTripClick}
     >
       {/* Gradient overlay to ensure text visibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
