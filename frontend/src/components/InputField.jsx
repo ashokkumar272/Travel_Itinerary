@@ -8,7 +8,7 @@ const InputField = ({ icon, placeholder, value, onChange, darkMode }) => {
       </div>
       <input
         type="text"
-        className={`w-full py-2 px-10 rounded-lg focus:ring-1 ${
+        className={`w-full h-[42.67px] py-2 px-10 rounded-lg focus:ring-1 ${
           darkMode 
             ? 'bg-[#333333] border-0 text-white placeholder-gray-400 focus:ring-[#3643FB]' 
             : 'bg-white border border-[#BFBFBF] focus:ring-[#3643FB] focus:outline-none'

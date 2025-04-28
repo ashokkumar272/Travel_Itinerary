@@ -7,7 +7,7 @@ const SelectField = ({ icon, placeholder, value, onChange, darkMode }) => {
         {icon}
       </div>
       <select
-        className={`w-full py-2 px-10 appearance-none rounded-lg ${
+        className={`w-full h-[42.67px] py-2 px-10 appearance-none rounded-lg ${
           darkMode 
             ? 'bg-[#333333] border-0 text-white focus:ring-[#3643FB]' 
             : 'bg-white border border-[#BFBFBF] text-gray-900 focus:outline-none focus:ring-[#3643FB]'

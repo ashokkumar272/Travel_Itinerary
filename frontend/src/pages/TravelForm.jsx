@@ -19,8 +19,8 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
   };
 
   return (
-    <div className={`flex flex-col justify-between min-h-screen ${darkMode ? 'bg-[#0B0809] text-white' : 'bg-white text-gray-900'}`}>
-      <div className={`w-full max-w-3xl mx-auto p-6 ${darkMode ? 'bg-[#0B0809]' : 'bg-white'} rounded-lg relative`}>
+    <div className={`flex flex-col px-4 py-10 justify-between min-h-screen ${darkMode ? 'bg-[#0B0809] text-white' : 'bg-white text-gray-900'}`}>
+      <div className={`w-full max-w-3xl mx-auto ${darkMode ? 'bg-[#0B0809]' : 'bg-white'} rounded-lg relative`}>
         {/* Dark Mode Toggle */}
         <div className="absolute right-6 top-6">
           <button 
@@ -41,11 +41,11 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
         </div>
         
         {/* Header - centered in portrait */}
-        <div className="mb-8 text-center">
-          <h1 className="text-2xl sm:text-3xl font-extrabold mb-1 sm:mb-2 font-mont">
+        <div className="mb-8">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-1 sm:mb-2 font-mont">
             Plan Your Journey, Your Way!
-          </h1>
-          <p className={`font-montserrat ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+          </h2>
+          <p className={`font-montserrat text-[14px] ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             Let's create your personalised travel experience
           </p>
         </div>
@@ -181,7 +181,7 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
           </div>
         </div>
       </div>
-      <div className={`flex justify-center sm:justify-start p-6 mt-auto ${darkMode ? 'bg-' : ''}`}>
+      <div className={`flex justify-center mb-3 sm:justify-start mt-auto ${darkMode ? 'bg-' : ''}`}>
         <div className="w-full sm:max-w-xs">
           <Button onClick={handleSubmit} darkMode={darkMode}>Continue</Button>
         </div>
