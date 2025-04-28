@@ -1,9 +1,6 @@
 import React from 'react';
-import { useTheme } from '../context/ThemeContext';
 
-const InputField = ({ icon, placeholder, value, onChange }) => {
-  const { darkMode, colors } = useTheme();
-  
+const InputField = ({ icon, placeholder, value, onChange, darkMode }) => {
   return (
     <div className="relative w-full">
       <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none text-gray-500">
@@ -11,14 +8,18 @@ const InputField = ({ icon, placeholder, value, onChange }) => {
       </div>
       <input
         type="text"
-        className={`w-full py-2 px-10 border rounded-lg focus:ring-1 ${
+        className={`w-full py-2 px-10 rounded-lg focus:ring-1 ${
           darkMode 
-            ? 'bg-dark-input border-dark-border text-white placeholder-gray-400 focus:ring-primary focus:border-primary' 
-            : 'bg-white border-gray-400 focus:ring-primary focus:outline-none'
+            ? 'bg-[#333333] border-0 text-white placeholder-gray-400 focus:ring-[#3643FB]' 
+            : 'bg-white border border-[#BFBFBF] focus:ring-[#3643FB] focus:outline-none'
         }`}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        style={{
+          backgroundColor: darkMode ? '#333333' : '#FFFFFF',
+          border: darkMode ? 'none' : '1px solid #BFBFBF'
+        }}
       />
     </div>
   );
