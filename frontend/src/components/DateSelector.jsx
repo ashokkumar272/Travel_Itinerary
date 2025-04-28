@@ -143,7 +143,7 @@ const DateSelector = ({
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap gap-2 sm:gap-4 items-center mt-3 sm:mt-4">
+      <div className="flex flex-wrap gap-6 sm:gap-8 items-center mt-3 sm:mt-4">
         {/* Selected date indicator */}
         <div
           className={`flex items-center gap-1 sm:gap-2 rounded-full py-1 px-2 sm:px-3 ${

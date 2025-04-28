@@ -113,7 +113,7 @@ const HomePage = ({ darkMode }) => {
   return (
     <div className={`flex flex-col min-h-screen ${darkMode ? 'bg-[#0B0809] text-white' : 'bg-white text-gray-900'}`}>
       {/* Top section with greeting and profile */}
-      <div className="px-6 py-4">
+      <div className="px-4 py-6">
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold font-mont">Hello Chhavi!</h1>
@@ -128,10 +128,10 @@ const HomePage = ({ darkMode }) => {
       </div>
   
       {/* Main content area */}
-      <div className="flex-1 px-6 pt-2 pb-24"> {/* Extra bottom padding for navbar */}
+      <div className="flex-1 px-4 pt-2 pb-24"> {/* Extra bottom padding for navbar */}
         {/* Upcoming Trips */}
         <div className="mb-8">
-          <h2 className="text-lg font-semibold mb-4 font-mont">Your Upcoming Trip</h2>
+          <h2 className="text-lg px-2 font-semibold mb-4 font-mont">Your Upcoming Trip</h2>
           <div className="space-y-6">
             {upcomingTrips.map((trip) => (
               <TripCard
@@ -151,7 +151,6 @@ const HomePage = ({ darkMode }) => {
   
         {/* Flight Details */}
         <div className="mb-8">
-          <h2 className="text-lg font-semibold mb-4 font-mont">Your Flight</h2>
           <FlightCard 
             flightDate="2025-01-26"
             departureTime="10:50 am"
@@ -168,11 +167,11 @@ const HomePage = ({ darkMode }) => {
   
         {/* Hotel Bookings */}
         <div className="mb-8">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold font-mont">Accommodation</h2>
+          <div className="flex justify-between items-center mb-2">
+            <h2 className="text-lg px-2 font-semibold mb-2 font-mont">Accommodation</h2>
             <a href="#" className={`underline ${darkMode ? 'text-[#C4FF3C]' : 'text-blue-600'} font-medium`}>See all</a>
           </div>
-          <div className="overflow-x-auto -mx-6 px-6 pb-2">
+          <div className="overflow-x-auto -mx-4 px-4 pb-2">
             <div className="flex gap-4 min-w-max">
               {hotelBookings.map((hotel) => (
                 <HotelBookingCard
@@ -194,7 +193,7 @@ const HomePage = ({ darkMode }) => {
         {/* Activities section with DateSelector */}
         <div className="mb-6">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold font-mont">Activities</h2>
+            <h2 className="text-lg px-2 font-semibold font-mont">Activities</h2>
             <a href="#" className={`underline ${darkMode ? 'text-[#C4FF3C]' : 'text-blue-600'} font-medium`}>See all</a>
           </div>
           <DateSelector 
