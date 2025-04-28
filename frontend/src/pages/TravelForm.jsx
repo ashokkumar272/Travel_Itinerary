@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import InputField from "../components/InputField";
-import SelectField from "../components/SelectField";
-import TravelOptionCard from "../components/TravelOptionCard";
+import InputField from "../components/DestinationInputField";
+import SelectField from "../components/NumberOfDays";
+import TravelOptionCard from "../components/TripCategorySelector";
 import Button from "../components/Button";
 
 const TravelForm = ({ darkMode, setDarkMode }) => {

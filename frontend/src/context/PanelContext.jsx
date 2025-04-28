@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-import SlidingPanel from '../components/SlidingPanel';
+import SlidingPanel from '../components/SlidingDetailsPanel';
 
 /**
  * @typedef {Object} PanelContextType

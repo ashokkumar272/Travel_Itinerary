@@ -5,12 +5,12 @@ import accomodation2 from '../assets/accomodation/macure.png';
 import activity1 from '../assets/activities/kimono-wearing.png';
 import activity2 from '../assets/activities/senso-ji-temple.png';
 import activity3 from '../assets/activities/sky-tree.png';
-import TripCard from '../components/TripCard';
-import FlightCard from '../components/FlightCard';
-import HotelBookingCard from '../components/HotelBookingCard';
+import TripCard from '../components/DestinationSummaryCard';
+import FlightCard from '../components/FlightItineraryCard';
+import HotelBookingCard from '../components/AccomidationDetailsCard';
 import ActivityCard from '../components/ActivityCard';
-import DateSelector from '../components/DateSelector';
-import BottomNavbar from '../components/BottomNavbar';
+import DateSelector from '../components/ActivityDateSelector';
+import BottomNavbar from '../components/Navbar';
 
 const HomePage = ({ darkMode }) => {
   const [selectedIcon, setSelectedIcon] = useState('home'); // Default selected icon is home
