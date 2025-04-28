@@ -190,7 +190,7 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
         </div>
       </div>
       {/* Dark Mode Toggle */}
-      <div className="absolute right-6 bottom-1">
+      {/* <div className="absolute right-6 bottom-1">
         <button
           onClick={() => setDarkMode(!darkMode)}
           className={`p-2 rounded-full ${
@@ -224,7 +224,7 @@ const TravelForm = ({ darkMode, setDarkMode }) => {
             </svg>
           )}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

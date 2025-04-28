@@ -4,7 +4,7 @@ const TravelOptionCard = ({ icon, label, selected, onClick, darkMode }) => {
   return (
     <div 
       onClick={onClick}
-      className={`flex gap-2 md:gap-3 items-center justify-center px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 rounded-lg border cursor-pointer transition-all w-full ${
+      className={`flex h-[50px] gap-2 md:gap-3 items-center justify-center px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 rounded-lg border cursor-pointer transition-all w-full ${
         darkMode
           ? selected 
             ? 'border-blue-500 text-white' 
